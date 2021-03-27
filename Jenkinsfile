@@ -1,5 +1,10 @@
-node('master') {
-  git url: 'https://github.com/nadavS3/jenkins-git-project-examp.git'
-  def mvnHome = tool 'M3'
-  sh "${mvnHome}/bin/mvn -B verify"
+pipeline {
+    agent { docker { image 'node:14-alpine' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'npm --version'
+            }
+        }
+    }
 }
