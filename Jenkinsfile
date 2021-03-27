@@ -5,6 +5,7 @@ pipeline {
             steps {
                 sh 'echo "Hello World"'
                 sh '''
+                    npm i
                     npm run build
                 '''
             }
