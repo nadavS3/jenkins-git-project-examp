@@ -16,9 +16,4 @@ pipeline {
             echo 'I failed the build!'
         }
     }
-     post { 
-        success { 
-            echo 'the build was successfull!'
-        }
-    }
 }
