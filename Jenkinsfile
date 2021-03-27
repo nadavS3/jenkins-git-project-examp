@@ -1,1 +1,1 @@
-sd
+checkout scm
