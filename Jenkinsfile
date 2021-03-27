@@ -1,1 +1,1 @@
-checkout scm
+echo 'hello from Pipeline'
