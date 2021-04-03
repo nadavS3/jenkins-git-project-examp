@@ -3,8 +3,6 @@ pipeline
     agent none
     stages
     {
-         boolean testPassed = true
-        
         stage('Build on master')
           {
             agent {label 'master'}   
@@ -12,12 +10,13 @@ pipeline
                {
                 sh 'echo "Hello World from master"'
                 sh 'npm i'
+                script{
                 def buildResults = sh 'npm run build'
                 if (buildResults == 'Failed')
                     {
                     error "build failed"
                     }
-                
+                }
                }
           }
          stage('Build on nadavs leptop')
