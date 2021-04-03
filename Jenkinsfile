@@ -39,6 +39,7 @@ pipeline
         }
     }
     post {
+        agent { label 'master' }
         success {
             setBuildStatus("Build succeeded", "SUCCESS");
         }
