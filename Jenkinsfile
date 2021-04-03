@@ -2,7 +2,7 @@ pipeline
 {
      environment {
    
-    buildResults = ‘0’
+    buildResults = "0"
   }
     agent none
     stages
@@ -14,11 +14,9 @@ pipeline
             steps
                {
                 sh 'echo "Hello World from master"'
-                sh
-                '''
-                npm i
-                npm run build
-                '''
+                sh 'npm i'
+                sh 'npm run build'
+                
                 
                }
           }
@@ -26,7 +24,7 @@ pipeline
         {
              success {
             echo "build was good"
-            buildResults = '1'
+            buildResults = "1"
         }
         failure {
             echo "build faild"
@@ -36,7 +34,7 @@ pipeline
          {
              when
              {
-                expression { buildResults == ‘1’ }
+                expression { buildResults == "1" }
              }
              agent {label 'nadavs-leptop'}   
               steps
