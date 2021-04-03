@@ -11,7 +11,7 @@ void setBuildStatus(String message, String state) {
 
 pipeline
 {
-    agent none
+    agent { label 'master' }
     stages
     {
         stage('Build on master')
@@ -39,7 +39,7 @@ pipeline
         }
     }
     post {
-        agent { label 'master' }
+        
         success {
             setBuildStatus("Build succeeded", "SUCCESS");
         }
