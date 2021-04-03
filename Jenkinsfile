@@ -1,19 +1,18 @@
 pipeline {
      agent { label 'master' }
     stages {
-        stage('Build') {
+        stage('Build on master') {
             steps {
-                sh 'echo "Hello World"'
-                sh '''
-                    npm i
-                    npm run build
-                '''
+                sh 'echo "Hello World from master"'
             }
         }
     }
-      post { 
-        failure { 
-            echo 'I failed the build!'
+     agent{label 'nadavs-leptop'}
+     stage('Build on master') {
+            steps {
+                sh 'echo "Hello World from master"'
+            }
         }
     }
+     
 }
