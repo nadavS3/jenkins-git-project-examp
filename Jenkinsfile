@@ -12,7 +12,7 @@ pipeline
                 sh 'echo "Hello World from master"'
                }
           }
-         stage('Build on master')
+         stage('Build on nadavs leptop')
          {
              agent {label 'nadavs-leptop'}   
               steps
