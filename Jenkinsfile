@@ -11,30 +11,26 @@ void setBuildStatus(String message, String state) {
 
 pipeline
 {
-    agent { label 'master' }
+    agent any
     stages
     {
         stage('Build on master')
         {
-            agent { label 'master' }
+            agent { label 'Minnie' }
             steps
             {
                 sh 'echo "Hello World from master"'
                 sh 'npm i'
-                script{
-                    def buildResults = sh 'npm run build'
-                    if (buildResults == 'Failed') {
-                        error "build failed"
-                    }
-                }
-            }
-        }
-        stage('Build on nadavs leptop')
-        {
-            agent { label 'nadavs-leptop' }
-            steps
-            {
-                sh 'echo "build was successfull"'
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                    sh 'npm run build'
+                } 
+                
+                //script{
+                  //  def buildResults = sh 'npm run build'
+                    //if (buildResults == 'Failed') {
+                      //  error "build failed"
+                    //}
+                //}
             }
         }
     }
