@@ -20,7 +20,7 @@ pipeline
             steps
             {   
                 echo "nadav"
-                echo "the reslt is ${currentBuild.currentResult} "
+                echo "the reslt is ${currentBuild} "
                 sh 'printenv'
                 sh 'npm i'
                 catchError(buildResult: 'UNSTABLE', stageResult: 'UNSTABLE') {
