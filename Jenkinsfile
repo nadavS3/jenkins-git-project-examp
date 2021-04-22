@@ -26,7 +26,8 @@ pipeline
                 catchError(buildResult: 'UNSTABLE', stageResult: 'UNSTABLE') {
                     sh 'npm run build'
                 } 
-                when { equals expected: UNSTABLE, actual: currentBuild.currentResult }
+                echo "the reslt is ${currentBuild.currentResult} "
+                when { equals expected: "UNSTABLE", actual: currentBuild.currentResult }
                 steps{
                 
                 echo "inside when build unstable"
