@@ -42,7 +42,7 @@ pipeline
     post {
         
         success {
-             echo "the reslt is ${currentBuild.currentResult} "
+             echo "the reslt is ${currentBuild.result} "
             setBuildStatus("Build succeeded", "SUCCESS");
         }
         failure {
