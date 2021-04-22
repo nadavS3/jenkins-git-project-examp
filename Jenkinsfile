@@ -23,7 +23,7 @@ pipeline
                 echo "the reslt is ${currentBuild.currentResult} "
                 sh 'printenv'
                 sh 'npm i'
-                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                catchError(buildResult: 'UNSTABLE', stageResult: 'UNSTABLE') {
                     sh 'npm run build'
                 } 
                 when { equals expected: UNSTABLE, actual: currentBuild.currentResult }
