@@ -19,7 +19,7 @@ pipeline
             
             steps
             {
-                sh 'echo "Hello World from master"'
+                sh 'printenv'
                 sh 'npm i'
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     sh 'npm run build'
