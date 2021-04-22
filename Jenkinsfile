@@ -25,7 +25,7 @@ pipeline
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     sh 'npm run build'
                 } 
-                sh 'echo "the reslt is  ${currentBuild.currentResult}" '
+                //sh 'echo "the reslt is  ${currentBuild.currentResult}" '
                 sh 'npm run build'
                 //script{
                   //  def buildResults = sh 'npm run build'
@@ -42,7 +42,7 @@ pipeline
             setBuildStatus("Build succeeded", "SUCCESS");
         }
         failure {
-            sh 'echo "${the reslt is  currentBuild.currentResult}" '
+            sh 'echo ${currentBuild.currentResult} '
             setBuildStatus("Build failed", "FAILURE");
         }
     }
