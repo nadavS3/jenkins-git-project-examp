@@ -11,12 +11,12 @@ void setBuildStatus(String message, String state) {
 
 pipeline
 {
-    
+    agent any
     stages
     {
         stage('Build on master')
         {
-            agent { label 'Minnie' }
+            
             steps
             {
                 sh 'echo "Hello World from master"'
