@@ -23,11 +23,15 @@ pipeline
                 echo "the reslt is ${currentBuild} "
                 sh 'printenv'
                 sh 'npm i'
-                catchError(buildResult: 'UNSTABLE', stageResult: 'UNSTABLE') {
+                currentBuild.result = 'FAILURE'
+                catchError {
+                    
                     sh 'npm run build'
                 } 
                     
                 //sh 'echo "the reslt is  ${currentBuild.currentResult}" '
+                echo "the reslt is ${currentBuild.currentResult} "
+                currentBuild.result = 'SUCCESS'
                 echo "the reslt is ${currentBuild.currentResult} "
                 //script{
                   //  def buildResults = sh 'npm run build'
