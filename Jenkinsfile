@@ -26,16 +26,6 @@ pipeline
                 catchError(buildResult: 'UNSTABLE', stageResult: 'UNSTABLE') {
                     sh 'npm run build'
                 } 
-                echo "the reslt is ${currentBuild.currentResult} "
-                when {
-                    expression {
-                        return currentBuild.currentResult == 'UNSTABLE';
-                                }
-                }
-                steps{
-                
-                echo "inside when build unstable"
-                }
                     
                 //sh 'echo "the reslt is  ${currentBuild.currentResult}" '
                 echo "the reslt is ${currentBuild.currentResult} "
@@ -46,6 +36,18 @@ pipeline
                     //}
                 //}
             }
+        }stage('when condiiton')
+        {
+         
+                when {
+                    expression {
+                        return currentBuild.currentResult == 'UNSTABLE';
+                                }
+                }
+                steps{
+                echo "the reslt is ${currentBuild.currentResult} "       
+                echo "inside when build unstable"
+                }
         }
     }
     post {
