@@ -28,6 +28,7 @@ pipeline
                    try {
                        sh 'npm run build'
                     } catch (err) {
+                    currentBuild.result = 'FAILURE'
                     echo err.getMessage()
                     }
                 }
