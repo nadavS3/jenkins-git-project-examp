@@ -19,7 +19,7 @@ pipeline
             
             steps
             {
-                sh 'echo "the reslt is ${currentBuild.currentResult}" '
+                sh 'echo the reslt is ${currentBuild.currentResult} '
                 sh 'printenv'
                 sh 'npm i'
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
