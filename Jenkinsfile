@@ -19,12 +19,14 @@ pipeline
             
             steps
             {
+                sh ' the reslt is ${currentBuild.currentResult} '
                 sh 'printenv'
                 sh 'npm i'
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     sh 'npm run build'
                 } 
-                
+                sh 'the reslt is  ${currentBuild.currentResult} '
+                sh 'npm run build'
                 //script{
                   //  def buildResults = sh 'npm run build'
                     //if (buildResults == 'Failed') {
@@ -40,6 +42,7 @@ pipeline
             setBuildStatus("Build succeeded", "SUCCESS");
         }
         failure {
+            sh '${the reslt is  currentBuild.currentResult} '
             setBuildStatus("Build failed", "FAILURE");
         }
     }
