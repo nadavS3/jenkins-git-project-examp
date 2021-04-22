@@ -23,7 +23,7 @@ pipeline
                 echo "the reslt is ${currentBuild.currentResult} "
                 sh 'printenv'
                 sh 'npm i'
-                catchError(buildResult: 'Failure', stageResult: 'UNSTABLE') {
+                catchError(buildResult: 'Failed', stageResult: 'Failed') {
                     sh 'npm run build'
                 } 
                 //sh 'echo "the reslt is  ${currentBuild.currentResult}" '
@@ -40,6 +40,7 @@ pipeline
     post {
         
         success {
+             echo "the reslt is ${currentBuild.currentResult} "
             setBuildStatus("Build succeeded", "SUCCESS");
         }
         failure {
