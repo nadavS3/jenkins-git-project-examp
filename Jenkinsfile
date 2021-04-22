@@ -36,18 +36,22 @@ pipeline
                     //}
                 //}
             }
-        }stage('when condiiton')
+        }
+        stage('when condiiton')
         {
          
-                when {
-                    expression {
+            when 
+            {
+                expression
+                {
                         return currentBuild.currentResult == 'UNSTABLE';
-                                }
                 }
-                steps{
+            }
+            steps
+            {
                 echo "the reslt is ${currentBuild.currentResult} "       
                 echo "inside when build unstable"
-                }
+            }
         }
     }
     post {
