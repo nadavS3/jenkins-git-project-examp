@@ -42,7 +42,7 @@ pipeline
             setBuildStatus("Build succeeded", "SUCCESS");
         }
         failure {
-            sh 'echo ${currentBuild.currentResult} '
+            sh 'echo currentBuild.currentResult '
             setBuildStatus("Build failed", "FAILURE");
         }
     }
