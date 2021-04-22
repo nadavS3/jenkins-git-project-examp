@@ -27,7 +27,7 @@ pipeline
                     sh 'npm run build'
                 } 
                 //sh 'echo "the reslt is  ${currentBuild.currentResult}" '
-                sh 'npm run build'
+                echo "the reslt is ${currentBuild.currentResult} "
                 //script{
                   //  def buildResults = sh 'npm run build'
                     //if (buildResults == 'Failed') {
@@ -43,7 +43,7 @@ pipeline
             setBuildStatus("Build succeeded", "SUCCESS");
         }
         failure {
-            sh 'echo currentBuild.currentResult '
+             echo "the reslt is ${currentBuild.currentResult} "
             setBuildStatus("Build failed", "FAILURE");
         }
     }
