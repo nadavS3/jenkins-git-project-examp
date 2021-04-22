@@ -27,7 +27,11 @@ pipeline
                     sh 'npm run build'
                 } 
                 echo "the reslt is ${currentBuild.currentResult} "
-                when { equals expected: "UNSTABLE", actual: currentBuild.currentResult }
+                when {
+                    expression {
+                        return currentBuild.currentResult == 'UNSTABLE';
+                                }
+                }
                 steps{
                 
                 echo "inside when build unstable"
