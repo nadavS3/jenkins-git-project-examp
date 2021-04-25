@@ -19,6 +19,7 @@ pipeline
             
             steps
             {   
+                
                 echo "nadav"
                 echo "the reslt is ${currentBuild} "
                 
