@@ -1,1 +1,0 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"digitalOrientation.organizations"}],"uuid":"1626651f9dbc4e94971db218813f0929"}
