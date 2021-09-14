@@ -1,0 +1,36 @@
+@import "../../../consts/colors.scss";
+
+.organization-container {
+    display: flex;
+    width: 100%;
+    margin: 4vh 0;
+    height: 2.5vh;
+    font-size: 2.2vh;
+    min-height: fit-content;
+    font-weight: 600;
+    .organization-name {
+        flex: 35%;
+        justify-content: flex-end;
+        align-items: center;
+        padding-left: 5%;
+
+        display: flex;
+    }
+    .organization-bar {
+        flex: 65%;
+        display: flex;
+        
+        .organization-bar-fill {
+            float: right;
+            z-index: 1;
+            height: 100%;
+            background-color: $stats-blue;
+            border-radius: 50px 0 0 50px;
+            max-width: 95%;
+        }
+        .organization-count {
+            position: relative;
+            padding-right: 2vh;
+        }
+    }
+}

@@ -1,0 +1,121 @@
+@import "../../consts/colors.scss";
+
+$marginTable: 12vh;
+
+$flex-size-major: 3;
+$flex-size-minor: 1;
+
+#user-answer-container {
+    .t-blue {
+        color: #103d6b;
+    }
+    #table-id {
+        width: 100%;
+    }
+    .thead-th {
+        flex: $flex-size-minor;
+    }
+    #thead-tr-id {
+        background-color: #103d6b;
+        color: white;
+        font-weight: bold;
+        font-size: 2vh;
+        height: 6vh;
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    //the first th who needs to be more to the right
+    .thead-th:first-child {
+        text-align: right;
+        flex: $flex-size-major;
+
+        .th-c {
+            margin-right: $marginTable;
+        }
+    }
+    .tbody-tr {
+        font-size: 2vh;
+        // padding: 1vh;
+        // margin: 1vh;
+        margin-top: 3vh;
+        margin-bottom: 2vh;
+        padding-bottom: 1vh;
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 2px solid #f1f1f3;
+    }
+    .tbody-tr:last-child {
+        border-bottom: none;
+    }
+    .td-t {
+        font-weight: bold;
+    }
+
+    .tbody-td {
+        text-align: center;
+        flex: $flex-size-minor;
+        font-weight: bold;
+        #tbody-td-arrow-container {
+            .arrow-icon {
+                vertical-align: middle;
+                width: 3vh;
+                cursor: pointer;
+            }
+        }
+        #td-user-answer-border {
+            border: 2px #c8d2dc solid;
+            border-radius: 5px;
+
+            #td-user-answer-img-container {
+                cursor: zoom-in;
+                position: relative;
+                display: inline-flex;
+                .td-user-answer-skipped {
+                    position: absolute;
+                    border: 2px solid $blue;
+                }
+                .td-user-answer-incorrect {
+                    position: absolute;
+                    border: 2px solid red;
+                }
+                .td-user-answer-correct {
+                    position: absolute;
+                    border: 2px solid green;
+                }
+                #td-user-answer-img {
+                    height: 15vh;
+                }
+            }
+        }
+    }
+    .tbody-td:first-child {
+        width: 80%;
+        text-align: right;
+        flex: $flex-size-major;
+    }
+    .td-q {
+        margin-right: $marginTable;
+    }
+    .answer-icon {
+        width: 33px;
+    }
+    .arrow-down {
+        transition-duration: 1s;
+    }
+    .arrow-up {
+        transform: rotate(180deg);
+        transition-duration: 1s;
+    }
+    #search-plus-container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #search-plus-icon {
+            cursor: pointer;
+        }
+    }
+}

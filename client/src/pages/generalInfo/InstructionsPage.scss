@@ -1,0 +1,44 @@
+@import "../../consts/consts.scss";
+
+#instructions {
+    position: absolute;
+    height: vh(82);
+    bottom: 1%;
+    right: -30%;
+    z-index: -2;
+}
+
+#instructions-leaf-right {
+    position: absolute;
+    right: 109.5%;
+    bottom: 48%;
+    z-index: 0;
+}
+#instructions-leaf-center {
+    position: absolute;
+    right: 125%;
+    bottom: 58%;
+    z-index: 0;
+}
+#instructions-leaf-left {
+    position: absolute;
+    right: 139%;
+    bottom: 51%;
+    z-index: 0;
+}
+
+@media only screen and (max-height: 1100px) {
+    #instructions-leaf-right {
+        right: 107%;
+    }
+    #instructions-leaf-center {
+        right: 124%;
+    }
+}
+
+.leaf {
+    max-height: vh(18);
+}
+#instructions-leaf-right {
+    max-height: vh(13);
+}

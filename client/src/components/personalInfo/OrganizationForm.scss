@@ -1,0 +1,111 @@
+@import "../../consts/consts.scss";
+$label-font-size: vh(2);
+$field-font-size: vh(1.8);
+
+#organization-form-page {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  // z-index: 1;
+
+  #phone-header {
+    
+    margin-top: 15.5%;
+  }
+  #gen-alert-container{
+    position: relative;
+    bottom:-8%;
+    
+  }
+  #mobile-header {
+    margin-bottom: 0%; // override 8%
+  }
+  .organization-page-content-general  {
+    
+    margin-right: 15%;
+    margin-top: 6%;
+    width: 70%;
+    height: vh(57);
+    // background-color: yellow;
+    #minor-order {
+      font-size: vh(2.7);
+      color: $dark-blue;
+      font-weight: 600;
+      padding-bottom: 5%;
+    }
+    #organization-loader-container{
+      position: relative;
+    }
+    #organization-form-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      // padding: 0px 4px 0px 0px;
+      padding-left: 10px;
+      max-height: 85%;
+      min-height: vh(42);
+      .mobile-generic-radio {
+        margin-bottom: 6%;
+      }
+      .organization-form-item-div {
+        //* the space between the button and the text
+        padding-right: 4%;
+        display: flex;
+        align-self: center;
+      }
+
+      .organization-form-label {
+        letter-spacing: 0.1px;
+        display: flex;
+        color: $grey;
+        // margin-bottom: 3%;
+        input {
+          height: vh(4);
+        }
+      }
+      .browser-label {
+        padding: 2% 0;
+        font-size: vh(2);
+      }
+      .native-box label {
+        position: relative;
+        font-size: $label-font-size;
+        font-weight: 600;
+    
+        color: $dark-blue;
+        letter-spacing: -0.5px;
+        display: block;
+      }
+      .input-style {
+        border-radius: 5px;
+        border-width: 0px !important;
+        height: vh(3.5);
+        position: relative;
+        font-size: $field-font-size;
+        width: 100%;
+        padding-right: 2%;
+      }
+      .mobile-input {
+        height: vh(5);
+        background-color: #eeeeee;
+        font-size: vh(2.5);
+        border-radius: 5px;
+      }
+      .show-input {
+        opacity: 1;
+        transition: opacity 1s ;
+      }
+      .hide-input {
+        opacity: 0;
+        transition: opacity 1s ;
+      }
+    }
+  }
+}
+

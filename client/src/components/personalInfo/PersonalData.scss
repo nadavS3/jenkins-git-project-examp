@@ -1,0 +1,182 @@
+@import "../../consts/consts.scss";
+
+$label-font-size: vh(2);
+$field-font-size: vh(1.8);
+
+input {
+  -webkit-user-select: text;
+}
+
+.personal-data-page-general {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: "assistant", sans-serif;
+}
+
+#family-status-div label {
+  padding-top: 5%;
+}
+//weird problem i couldent get family status go more up so hard fix 4 now
+#family-status-div {
+  margin-top: -4%;
+}
+
+#personal-data-page-mobile {
+  width: 100%;
+  height: 100%;
+}
+//options for both types of screen, later in code we change specific things in phone
+.personal-data-page-general {
+  .dropdown-label {
+    position: relative;
+    font-size: $label-font-size;
+    font-weight: 600;
+    margin-bottom: 1%;
+    padding-top: 1%;
+
+    color: $dark-blue;
+    letter-spacing: -0.5px;
+    display: block;
+  }
+  label {
+    // position: relative;
+    margin: 12% 0% 1% 0%;
+  }
+  #phone-header {
+    margin-top: 15.5%;
+  }
+  .personal-data-form {
+    position: relative;
+    padding: 2%;
+    top: 3.5%;
+    right: 17%;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: visible;
+    height: 60%;
+    .input-style {
+      border-radius: 5px;
+      border-width: 0px !important;
+      height: vh(3.5);
+      position: relative;
+      font-size: $field-font-size;
+      width: 100%;
+      padding-right: 2%;
+    }
+  }
+
+  .personal-data-form > div {
+    width: 100%;
+  }
+
+  .native-box label {
+    position: relative;
+    font-size: $label-font-size;
+    font-weight: 600;
+
+    color: $dark-blue;
+    letter-spacing: -0.5px;
+    display: block;
+  }
+
+  .autocomplete label {
+    //sets label of autocomplete
+    position: relative;
+    font-size: $label-font-size;
+    font-weight: 600;
+
+    color: $dark-blue;
+    letter-spacing: -0.5px;
+    display: block;
+  }
+
+  #autocomplete-inner {
+    //set height of the autocomplete component
+    height: 40%;
+  }
+
+  #auto-complete-options-pop-up {
+    color: $grey;
+  }
+
+  .suggestions {
+    border-radius: 2px;
+    font-size: $field-font-size;
+    background-color: #dadada;
+  }
+  #family-status-div label {
+    padding-top: 5%;
+  }
+  //weird problem i couldent get family status go more up so hard fix 4 now
+  #family-status-div {
+    margin-top: -4%;
+  }
+  //the background color of options
+  .MuiNativeSelect-select:not([multiple])option {
+    background-color: #dadada;
+    font-size: vh(1.9);
+  }
+}
+#personal-data-page-mobile {
+  #personal-data-form-mobile {
+    overflow-y: auto;
+    top: 0px;
+    height: 70%;
+    right: 10%;
+    width: 80%;
+  }
+  #personal-data-form-browser {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  #mobile-header {
+    margin-bottom: 0%;
+  }
+  .mobile-input {
+    height: vh(5);
+    background-color: #eeeeee;
+    font-size: vh(2.5);
+    border-radius: 5px;
+  }
+  .mobile-btn {
+    bottom: vh(2.1);
+  }
+
+  #mobile-label {
+    font-size: vh(2.5);
+    margin-bottom: vh(0.8);
+    margin-top: vh(2);
+  }
+
+  .MuiNativeSelect-icon {
+    top: calc(50% - 12px);
+    margin-left: 2%;
+  }
+
+  #gen-alert-container {
+    overflow: hidden;
+    position: absolute;
+    bottom: vh(1);
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .personal-data-page-general {
+    #personal-data-form-tablet {
+      width: 25%;
+      top: 19%;
+      right: 37.5%;
+    }
+  }
+}

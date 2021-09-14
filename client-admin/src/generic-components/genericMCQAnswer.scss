@@ -1,0 +1,31 @@
+@import "../consts/colors.scss";
+
+.mcq-answer {
+    display: flex;
+    margin-bottom: 2%;
+    align-items: center;
+    input[type="radio"] {
+        display: none;
+    }
+    .checkbox {
+        height: 15px;
+        width: 15px;
+        border: 1px solid $blue;
+        margin-left: 5px;
+        border-radius: 3px;
+        .check-icon {
+            vertical-align: 0;
+            height: 15px;
+            width: 15px;
+            margin: -1px -1px 3px 0;
+            cursor: pointer;
+        }
+    }
+    .delete-answer {
+        cursor: pointer;
+        margin-right: 5px;
+    }
+    .dont-show {
+        opacity: 0;
+    }
+}

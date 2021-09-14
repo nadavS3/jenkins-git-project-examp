@@ -1,0 +1,14 @@
+.active-drag{
+    background-color: rgba(92, 129, 165, 0.13);
+    border-style: dashed;
+    border-color: rgba(0, 0, 0, 0.438);
+}
+#ddq-element{
+    position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+.artificial-hover{
+    background-color: rgba(33, 35, 36, 0.24);
+  }

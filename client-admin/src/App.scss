@@ -1,0 +1,14 @@
+
+@import "./consts/colors.scss";
+.App {
+  direction: rtl;
+}
+
+body {
+  background-color: $bg-grey;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "assistant", sans-serif;
+}

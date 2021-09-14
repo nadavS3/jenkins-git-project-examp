@@ -1,0 +1,33 @@
+@import '../../consts/consts.scss';
+
+#data {
+    position: absolute;
+    height: vh(43);
+    top: 26%;
+    right: 94%;
+    z-index: -1;
+}
+
+#personal-data-oval1{
+    position: absolute;
+    height: vh(28);
+    top: 13%;
+    right: 96%;
+    z-index: -2;
+}
+@keyframes continue-spin {
+    from {transform: rotate(45deg) ;  }
+    to   { transform:  rotate(80deg) ; } 
+  }
+
+#personal-data-oval2{
+    position: absolute;
+    height: vh(64);
+    top: 14%;
+    left: 32%;
+    z-index: -2;
+    transform: rotate(45deg);
+    // animation-name:continue-spin ;
+    // animation-duration: 0.1ms;
+}
+

@@ -1,0 +1,57 @@
+@import "../../consts/consts.scss";
+
+#question-image-container-mobile {
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  }
+}
+#question-image-container-browser {
+  width: vw(67.5);
+  position: relative;
+  height: vh(93.5);
+}
+.question-image-container {
+  overflow: auto !important;
+  .IOS-view {
+    #mobile-image {
+      // width: 100% !important;
+    }
+  }
+  .mobile-image-container {
+    height: 100%;
+    margin: auto;
+    width: fit-content;
+    position: relative;
+  }
+  .browser-image-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: calc(var(--vw, 1vw) * 67.5);
+    max-height: calc(var(--vh, 1vh) * 93.5);
+    height: fit-content;
+    width: fit-content;
+  }
+  #image-container {
+    #browser-image {
+      width: vw(67.5);
+      display: block;
+      max-height: vh(93);
+    }
+    #mobile-image {
+      height: 100%;
+    }
+    .dont-display {
+      display: none;
+    }
+  }
+}

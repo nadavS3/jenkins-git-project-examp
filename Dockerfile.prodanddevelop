@@ -1,0 +1,75 @@
+FROM node:12.19.0-alpine3.9 as base
+
+WORKDIR /usr/src/app
+
+COPY ./server/package*.json ./server/
+
+COPY ./client/package*.json ./client/
+
+FROM base AS dependencies
+#creating server dependencies
+WORKDIR /usr/src/app/server
+# copying all server code
+COPY ./server ./
+# setting to no progress bar and depth of logs to 0
+RUN npm set progress=false && npm config set depth 0
+# first installing node_modules only for produtcion and naming them prod_node_modules and building dist
+RUN npm install --only=production
+RUN npm run build 
+RUN cp -R node_modules prod_node_modules
+# creating a node_modules for development mode
+RUN npm install
+
+# creating client dependencies
+WORKDIR /usr/src/app/client
+COPY ./client ./
+# first installing node_modules only for produtcion and naming them prod_node_modules and building dist
+RUN npm install --only=production
+RUN npm run build
+RUN cp -R node_modules prod_node_modules
+# creating a node_modules for development mode
+RUN npm install
+
+
+#copying the files from dependencies image
+FROM base as prod
+
+ENV NODE_ENV=production
+
+# all the clinet files
+WORKDIR /usr/src/app/client
+
+COPY --from=dependencies /usr/src/app/client/prod_node_modules ./node_modules
+
+COPY --from=dependencies /usr/src/app/client/build ./build
+
+
+# all the server files
+WORKDIR /usr/src/app/server
+
+COPY --from=dependencies /usr/src/app/server/prod_node_modules ./node_modules
+
+COPY --from=dependencies /usr/src/app/server/dist ./dist
+
+#copying the .env files
+COPY --from=dependencies /usr/src/app/server/.env* ./
+
+
+
+
+CMD ["node", "dist/main.js"]
+
+# FROM base as dev
+
+# ENV NODE_ENV=development
+
+# WORKDIR /usr/src/app/server
+
+# COPY --from=dependencies /usr/src/app/server/node_modules ./node_modules
+
+# COPY --from=dependencies /usr/src/app/server/dist ./dist
+
+# #copying the .env files
+# COPY --from=dependencies /usr/src/app/server/.env* ./
+
+# CMD ["npm","run","start:dev"]

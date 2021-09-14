@@ -1,0 +1,150 @@
+@import "../../consts/consts.scss";
+
+#finish-questionnaire-page {
+  .thank-you-animation {
+    color: #000;
+    animation-name: thankyouanimation;
+    animation-duration: 4s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+  }
+  .speech-bubble {
+    width: 76%;
+    right: 12%;
+  }
+
+  .message-text {
+    font-weight: 600;
+    width: 100% !important;
+    a {
+      cursor: pointer;
+    }
+  }
+  #plant-no-leafs {
+    position: absolute;
+  }
+  #phone-header {
+    width: 75%;
+    font-size: vh(3.9);
+    margin-top: 10%;
+    padding-bottom: 1%;
+    margin-bottom: 5%;
+  }
+  #mobile-header {
+    margin-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 5%;
+  }
+  #message-text0 {
+    line-height: 100%;
+    color: $dark-blue;
+    word-wrap: break-word;
+    font-weight: bold;
+    font-size: vh(3.6);
+    padding: 3% 0;
+  }
+  #message0 {
+    text-align: center;
+    margin-top: 50%;
+  }
+  #message-text1 {
+    color: $dark-blue;
+    word-wrap: break-word;
+    font-weight: bold;
+    font-size: vh(2.6);
+    text-align: center;
+  }
+  #message-text2 {
+    margin: 0 auto;
+  }
+
+  #finish-message {
+    color: $dark-blue;
+    white-space: pre-line;
+    text-align: center;
+    width: 95%;
+    padding-right: 5%;
+    font-weight: 600; // semi bold
+    height: fit-content;
+    font-size: vh(2.5);
+  }
+  .last-message-mobile {
+    .message-text {
+      font-size: vh(2.3);
+    }
+  }
+  
+  .category-icons {
+    position: relative;
+    width: vh(2);
+    top: vh(0.3);
+  }
+
+  #course-link {
+    color: $grey;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .all-messages-container {
+    overflow: auto;
+    // &::-webkit-scrollbar {
+    //   display: none;
+    // }
+
+    .showup-animation {
+      margin-bottom: 8%;
+      
+      animation-name: message-showup-2s-delay;
+      animation-duration: 2s;
+      // animation-delay: 4s;
+      animation-timing-function: ease;
+      animation-fill-mode: both;
+    }
+  }
+
+  #all-messages-mobile {
+    max-height: 70%;
+  }
+  #all-messages-browser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 85%;
+    .speech-bubble{
+      right:0%;
+    }
+  }
+
+  @keyframes message-showup-2s-delay {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes thankyouanimation {
+    0% {
+      // opacity: 0;
+      transform: rotate(15deg);
+    }
+    35% {
+      transform: rotate(0deg);
+    }
+    70% {
+      transform: scale(0.6);
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+@media screen and (max-aspect-ratio: 2/4) {
+  .last-message-mobile {
+    .message-text {
+      font-size: vh(1.7) !important;
+    }
+  }
+}

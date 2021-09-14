@@ -1,0 +1,35 @@
+$dark-blue: #103d6b;
+
+$light-blue: #26b7ec;
+
+$grey: #707070;
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+  
+
+  @function vw($quantity) {
+    @return calc(var(--vw, 1vw) * #{$quantity});
+  }
+  
+  @function vh($quantity) {
+    @return calc(var(--vh, 1vh) * #{$quantity});
+  }
+
+  @function pow($number, $exponent) {
+    $value: 1;
+  
+    @if $exponent > 0 {
+      @for $i from 1 through $exponent {
+        $value: $value * $number;
+      }
+    }
+  
+    @return $value;
+  }

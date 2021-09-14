@@ -1,0 +1,27 @@
+@import "../../consts/consts.scss";
+
+
+.intro-general{
+    position: absolute;
+    z-index: -1;
+}
+#intro-browser {
+    
+    height: vh(75.5);
+    bottom: 2%;
+    right: -55.5%;
+    
+}
+
+#intro-mobile{
+    height: vh(35.5);
+    bottom: 0%;
+}
+
+#instroduction-ovals{
+    position: absolute;
+    height: vh(84);
+    right: -102.5%;
+    z-index: -2;
+    top: -9%;
+}

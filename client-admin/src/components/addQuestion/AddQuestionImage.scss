@@ -1,0 +1,19 @@
+@import "../../consts/colors.scss";
+
+#add-padding-to-image {
+    border: 1px solid $blue;
+    border-radius: 10px;
+    padding: 3%;
+    #img-container {
+        position: relative;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+.submit-cancel-btns {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+}

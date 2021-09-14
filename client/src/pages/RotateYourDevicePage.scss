@@ -1,0 +1,39 @@
+@import "../consts/consts.scss";
+
+#rotate-page {
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: vw(100);
+    height: vh(100);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    #mobile-logo {
+        right: vh(5);
+        top: vh(5);
+        width: 30%;
+        position: absolute;
+    }
+    #header {
+        margin-top: 10%;
+        text-align: center;
+        align-self: center;
+        font-family: "Heebo", sans-serif;
+        font-size: vh(12);
+        color: $dark-blue;
+        border-bottom: 2px solid $light-blue;
+    }
+    .text {
+        width: 85%;
+        font-family: "assistant", sans-serif;
+        font-size: vh(8);
+        color: $dark-blue;
+        align-self: center;
+        text-align: center;
+    }
+    #desc {
+        margin: vh(5) auto;
+    }
+}

@@ -1,0 +1,19 @@
+@import "../consts/consts.scss";
+
+.ddq-instruction {
+    color: #103d6b;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    border-top: 2px solid #103d6b;
+    padding: calc(var(--vh, 1vh) * 0.5);
+    font-size: calc(var(--vh, 1vh) * 2.2);
+    font-weight: bold;
+}
+
+#draggable-elements-container {
+    display: flex;
+    // flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    position: relative;
+}

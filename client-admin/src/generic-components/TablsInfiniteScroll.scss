@@ -1,0 +1,84 @@
+@import "../consts/colors.scss";
+
+#table-container {
+    .table {
+        width: 100%;
+        color: $blue;
+        border-radius: 5px 5px 0 0;
+        border-spacing: 0; // so thead{tr{}} will start from top of table
+        thead {
+            display: table-header-group;
+            vertical-align: middle;
+            border-color: inherit;
+            tr {
+                background-color: $blue;
+                color: white;
+            }
+            th {
+                padding: 1vh 3vh;
+                font-size: 2.5vh;
+                font-weight: 400;
+                text-align: center;
+            }
+        }
+        .tr {
+            height: 7vh;
+            border-collapse: collapse;
+        }
+
+        .tableBodyStyle {
+            td {
+                padding: 2vh 0;
+                font-size: 2.5vh;
+                max-width: 15vw;
+                background-color: white;
+                text-align: right;
+            }
+        }
+        .tableBodyStyle:not(:last-child) {
+            td {
+                border-bottom: 2px solid #f1f2f3; // line between each row
+            }
+        }
+        .noRes {
+            font-size: 2.5vh;
+            padding: 3vh;
+            text-align: center;
+            background-color: white;
+        }
+    }
+    .tableNavigation {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #747474;
+        font-size: 2.3vh;
+
+        .navArrow {
+            margin: 0 2vh;
+            font-size: 2vh;
+            cursor: pointer;
+        }
+
+        .disabledNavArrow {
+            color: #74747436;
+            cursor: unset;
+        }
+    }
+    td {
+        div {
+            text-align: center;
+        }
+        &:hover {
+            cursor: pointer !important;
+        }
+    }
+    .unknown-level {
+        width: 20%;
+        border: 1px #103d6b solid;
+        margin: auto;
+    }
+}

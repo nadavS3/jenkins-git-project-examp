@@ -1,0 +1,46 @@
+@import "../consts/consts.scss";
+
+.speech-bubble {
+    position: relative;
+    border-radius: 0.4em;
+    height: fit-content;
+    padding: 2%;
+    color: $grey;
+    font-weight: 600;
+    white-space: pre-line;
+    width: 100%;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border: 1.25em solid transparent;
+        border-bottom: 0;
+        margin-bottom: -1.25em;
+    }
+}
+.mobile-speech {
+    font-size: vw(5);
+}
+.browser-speech:not(.reverse) {
+    // width: 76%;
+    // right: 12%;
+    font-size: vh(2);
+}
+.regular {
+    background: #d4d3d3;
+    &:after {
+        left: 75%;
+        border-top-color: #d4d3d3;
+        border-right: 0;
+    }
+}
+.reverse {
+    background: #f6eec6;
+    &:after {
+        left: 25%;
+        border-left: 0;
+        border-top-color: #f6eec6;
+    }
+}

@@ -1,0 +1,29 @@
+@import '../consts/consts.scss';
+
+.mobile-generic-radio {
+    border: 1px solid #7070706b;
+    margin-bottom: 4%;
+    border-radius: 5px;
+    .mobile-label {
+        padding: 2% 0;
+        font-size: vh(2.2);
+        display: flex;
+        input {
+            display: none;
+        }
+    }
+    .value {
+        flex-basis: 80%;
+    }
+    .check-mark {
+        flex-basis: 20%;
+        align-self: center;
+    }
+    .checked {
+        opacity: 1;
+        transition: opacity 1s;
+    }
+    .unchecked {
+        opacity: 0;
+    }
+}

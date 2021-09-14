@@ -1,0 +1,38 @@
+@import "../consts/colors.scss";
+
+.general-btn {
+    display: flex;
+    align-self: center;
+    background: transparent 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 10px;
+    opacity: 1;
+    color: white;
+    text-align: center;
+    width: fit-content;
+    cursor: pointer;
+    .plus-icon {
+        padding-left: 10px;
+    }
+}
+.blue-btn {
+    background-color: $stats-blue;
+}
+.red-btn {
+    background-color: $stats-red;
+}
+.green-btn {
+    background-color: $stats-sea-green;
+}
+.btn-S {
+    font-size: 2vh;
+    padding: 6px 8px;
+}
+.btn-M {
+    font-size: 2.5vh;
+    padding: 6px 10px;
+}
+.btn-L {
+    font-size: 3vh;
+    padding: 6px 12px;
+}

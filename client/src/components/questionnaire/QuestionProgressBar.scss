@@ -1,0 +1,64 @@
+@import "../../consts/consts.scss";
+
+#question-progress-bar-container {
+  background-color: #b2c5ca;
+  display: flex;
+  align-items: center;
+  width: vw(100);
+  // position: fixed;
+  #number-of-question {
+    color: $dark-blue;
+    font-weight: bold;
+    font-size: vh(2.5);
+    flex: 15%;
+    text-align: left;
+    padding-left: 2%;
+  }
+  .progress-bar {
+    height: vh(2);
+    background-color: $grey;
+
+    border-radius: 10px 10px 10px 10px;
+    #moving-progress-bar {
+      position: relative;
+      background-color: $light-blue;
+      height: 100%;
+      border-radius: 10px 10px 10px 10px;
+      top: 0;
+      right: 0;
+    }
+  }
+  #browser-progress-bar {
+    flex: 70%;
+  }
+  #mobile-progress-bar {
+    flex: 50%;
+  }
+  .opacity0 {
+    opacity: 0;
+  }
+  .dont-know-button-container {
+    #dont-know-button {
+      background-color: $dark-blue;
+      font-weight: bold;
+      box-shadow: 0px 3px 6px #00000029;
+      border-radius: 5px;
+      color: white;
+      align-content: center;
+      width: 80%;
+      padding: 3% 0;
+      font-size: 90%;
+      margin: auto;
+      text-align: center;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  #browser-dont-know-button-container {
+    flex: 15%;
+  }
+  #mobile-dont-know-button-container {
+    flex: 35%;
+  }
+}

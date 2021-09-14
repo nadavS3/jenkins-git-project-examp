@@ -1,0 +1,81 @@
+@import "../../consts/consts.scss";
+
+#mobile-question-info-container {
+    margin-bottom: 3%;
+    #mobile-question-info {
+        width: vw(95);
+        box-shadow: 0px 3px 6px #00000029;
+        margin: auto;
+        margin-top: 2%;
+        #top-row-container {
+            display: flex;
+            width: 85%;
+            height: 20%;
+            margin: auto;
+            padding-top: 5%;
+            justify-content: space-between;
+            align-items: center;
+            #question-number {
+                color: $dark-blue;
+                flex: 70%;
+
+                font-size: vh(3.5);
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+            }
+            #icons {
+                flex: 50%; // depend on other flex
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                svg {
+                    width: 1.6rem;
+                }
+                #chevron-up {
+                    transform: rotate(-180deg);
+                    transition: transform 2s;
+                }
+                #chevron-down {
+                    transform: rotate(0deg);
+                    transition: transform 2s;
+                }
+                #audio-icon {
+                    audio {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        #line {
+            width: 90%;
+            margin: 3% auto;
+            height: 1px;
+            background-color: $grey;
+        }
+        .question-text {
+            width: 85%; // depend on other flex
+            margin: auto;
+            font-size: vh(2.5);
+        }
+        #story {
+            color: $grey;
+            padding-bottom: 5%;
+        }
+        .display-story {
+            max-height: 500px;
+            opacity: 1;
+            transition: max-height 2s, opacity 1s 0.5s;
+        }
+        .no-display-story {
+            max-height: 0;
+            opacity: 0;
+            transition: max-height 2s, opacity 1s;
+        }
+        #instruction {
+            color: $dark-blue;
+            font-weight: 600;
+            padding-bottom: 3%;
+        }
+    }
+}

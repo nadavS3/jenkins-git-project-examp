@@ -1,0 +1,11 @@
+@import "../../../consts/colors.scss";
+
+.centered-percentage {
+    text {
+        tspan {
+            font-size: 4.5vh;
+            fill: $stats-sea-green;
+            font-weight: 900;
+        }
+    }
+}

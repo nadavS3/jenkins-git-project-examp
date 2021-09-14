@@ -1,0 +1,13 @@
+@import"../../consts/consts.scss";
+
+.drop-elem-container{
+    border: 2px solid #959595;
+    border-radius: 5px;
+    padding :vh(0.5);
+    margin: vh(0.5);
+    font-size: vh(2);
+    // background-color: rgba(250, 250, 250, 0.534);
+    background-color: white;
+    text-align: center;
+    height: fit-content;
+}

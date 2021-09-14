@@ -1,0 +1,26 @@
+#ddq-element-review-container{
+
+  position: absolute;
+  
+  #ddq-element-review{
+    
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    // background-color: rgba(92, 129, 165, 0.13);
+    // border-style: dashed;
+    border-color: rgba(0, 0, 0, 0.438);
+  }
+  
+}
+.ddq-correct{
+  border-radius: 25px;
+  border: 4px solid limegreen;
+}
+
+.ddq-incorrect{
+  border-radius: 25px;
+  border: 4px solid red;
+}

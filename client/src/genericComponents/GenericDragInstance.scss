@@ -1,0 +1,26 @@
+#add-answers {
+    #img-container {
+        #main-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.2;
+        }
+        #minor-box {
+            position: absolute;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 6px;
+        }
+        .correct {
+            border: 2px solid green;
+            background-color: green;
+        }
+        .incorrect {
+            border: 2px solid red;
+            background-color: red;
+        }
+    }
+}

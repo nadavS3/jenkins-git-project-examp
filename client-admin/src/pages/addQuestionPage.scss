@@ -1,0 +1,93 @@
+@import "../consts/colors.scss";
+
+#add-question-page {
+    #above-box {
+        margin: 3% auto 1% auto;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        #question-number {
+            flex: 1;
+            font-size: 3vh; // override
+        }
+        #category-and-submit {
+            flex: 1;
+            justify-content: space-between;
+            display: flex;
+            #category-container {
+                display: flex;
+                z-index: 1;
+                align-items: center;
+                #category-title {
+                    margin-left: 5px;
+                }
+                .generic-filter-container {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    width: fit-content;
+                    max-height: 4vh;
+                    overflow-y: visible;
+                    position: relative;
+
+                    #filter-container {
+                        min-width: 15vw;
+                        max-width: 20vw;
+                        height: 4vh;
+                        margin-right: 3vh;
+                    }
+                    .filter-text {
+                        width: 100%;
+                        height: fit-content;
+                        text-align: center;
+                        color: $blue;
+                        font-weight: bold;
+                        font-size: 1.8vw;
+                    }
+                }
+            }
+        }
+    }
+    #add-question-box {
+        #add-question-form {
+            display: flex;
+            #question-info-container {
+                padding: 3%;
+                flex: 30%;
+            }
+            #question-image-container {
+                padding: 3%;
+                flex: 60%;
+            }
+        }
+        .file-input-clicker {
+            display: flex;
+            padding: 8px;
+            background-color: $blue;
+            box-shadow: 0px 3px 6px #00000029;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            width: fit-content;
+        }
+        .files-uploader-hidden {
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+    }
+    .generic-add-question-title {
+        color: $blue;
+        font-weight: bold;
+    }
+    .big-title {
+        font-size: 2.5vh;
+    }
+    .small-title {
+        font-size: 2vh;
+    }
+    .psq-answers-title {
+        margin-bottom: 1vh;
+    }
+}

@@ -1,0 +1,16 @@
+@import '../consts/consts.scss';
+
+.error-message {
+    font-size: vh(2);
+    color: firebrick;
+    height: fit-content;
+    padding: 0 !important;
+}
+
+.button-error-message {
+    position: absolute;
+    align-self: center;
+    font-size: vh(2);
+    text-align: center;
+    bottom: 5%;
+}

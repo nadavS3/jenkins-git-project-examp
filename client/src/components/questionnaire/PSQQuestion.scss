@@ -1,0 +1,80 @@
+@import "../../consts/consts.scss";
+.place-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .review-correct-popup {
+        border: 3px solid limegreen;
+        &:hover {
+            cursor: default;
+        }
+    }
+    .review-incorrect-popup {
+        border: 3px solid maroon;
+        &:hover {
+            cursor: default;
+        }
+    }
+    .display-answer {
+        animation-name: showup;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        border-radius: vh(1);
+
+
+        //* attention there are question that looked weird but if you remove this you get even more questions looking weird, margin auto was bad for some pictures and padding is needed because in couple of them the border is literally on the div and u cannot see it
+        padding: 5%;
+        position: relative;
+        // margin: auto;
+    }
+    .no-display-answer {
+        z-index: -1;
+        display: none;
+    }
+}
+#browser-questionnaire-place-container {
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(69, 71, 73, 0.158);
+    }
+}
+
+@-moz-keyframes showup {
+    0% {
+        height: 0%;
+        width: 0%;
+        opacity: 0;
+    }
+    100% {
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes showup {
+    0% {
+        height: 0%;
+        width: 0%;
+        opacity: 0;
+    }
+    100% {
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+    }
+}
+@keyframes showup {
+    0% {
+        height: 0%;
+        width: 0%;
+        opacity: 0;
+    }
+    100% {
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+    }
+}

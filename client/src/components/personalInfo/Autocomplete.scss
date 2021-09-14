@@ -1,0 +1,46 @@
+@import "../../consts/consts.scss";
+#autocomplete-inner {
+  .suggestions {
+    // position: absolute;
+    z-index: 2;
+    font-size: vh(1.8);
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    // justify-content: end;
+    border: 1px solid #999;
+    border-top-width: 0;
+    list-style: none;
+    margin-top: 0;
+    max-height: vh(32);
+    
+    padding-right: 0;
+    // background-color: grey;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: visible;
+  }
+
+  .suggestions li {
+    padding: 0.3rem;
+  }
+
+  .suggestion-active,
+  .suggestions li:hover {
+    color: black;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .suggestions li:not(:last-of-type) {
+    border-bottom: 1px solid #999;
+  }
+   #mobile-list{
+    position: absolute;
+    font-size: vh(2.5);
+    margin-bottom: vh(0.8);
+    margin-top: vh(2);
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,108 @@
+@import "../../consts/colors.scss";
+
+#specific-user-container {
+    display: flex;
+    flex-direction: column;
+
+    .arrow-up {
+        transform: rotate(180deg);
+        transition-duration: 1s;
+        width: 3vh;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .arrow-down {
+        transition-duration: 1s;
+        width: 3vh;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .user-answer-icon {
+        width: 33px;
+    }
+
+    .main-description {
+        color: $blue;
+        font-weight: bold;
+        font-size: 3vh;
+    }
+    .title {
+        margin: 0 2vw 2vh 0;
+    }
+    .user-name {
+    }
+    .no-scroll {
+        overflow-y: unset;
+    }
+    .answer-div-correct {
+        position: absolute;
+        border: 2px solid green;
+    }
+    .answer-div-incorrect {
+        position: absolute;
+        border: 2px solid red;
+    }
+    .answer-div-skipped {
+        position: absolute;
+        border: 2px solid $blue;
+    }
+    .hide-border-question-data {
+        border: none !important;
+        font-size: 2.1vh !important;
+        padding-top: unset !important;
+        margin-bottom: 5vh;
+    }
+    .hide-border {
+        border: none !important;
+    }
+
+    #table-container {
+        .table .tableBodyStyle td {
+            border-top: 2px solid #f1f2f3;
+            border-bottom: none;
+        }
+        .specific-question-image-container {
+            position: relative;
+            width: 60%;
+            margin: auto;
+            cursor: pointer;
+        }
+        #mobile-image-container-id {
+            width: 42%;
+        }
+        #specific-question-image {
+            width: 100%;
+            display: block;
+        }
+        .time {
+            text-align: center;
+            font-weight: bold;
+        }
+        .tableHead th {
+            font-weight: bold;
+            font-size: 2.2vh;
+            text-align: center;
+        }
+        .tableBodyStyle td:first-child div {
+            text-align: right;
+            padding-right: 7.7vw;
+        }
+        .tableHead th:first-child {
+            text-align: right;
+            padding-right: 8vw !important;
+            padding-left: 13vw !important;
+        }
+        td {
+            padding: 2vh 0vw 2vh 0;
+            div {
+                text-align: center;
+            }
+        }
+        .field-container {
+            min-height: 4vh;
+        }
+    }
+}

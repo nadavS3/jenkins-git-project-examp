@@ -1,0 +1,154 @@
+@import "../consts/consts.scss";
+
+
+//general style, bottom of page is style specific for mobile
+.phone-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: "assistant", sans-serif;
+}
+.hide-shape{display: none !important;}
+#browser-container {
+  height: fit-content;
+  width: fit-content;
+  margin: auto;
+  #phone-fake-image {
+    height: vh(90);
+  }
+}
+#top-right-logo {
+  position: absolute;
+  top: vh(4.5);
+  right: vw(3.5);
+  width: vw(15);
+  height: auto;
+  min-width: 150px;
+  background: transparent 0% 0% no-repeat padding-box;
+  mix-blend-mode: darken;
+  opacity: 1;
+}
+#oval1-0 {
+  width: auto;
+  height: 72%;
+  right: 31%;
+  bottom: 34%;
+  z-index: -1;
+  position: absolute;
+  visibility: hidden;
+}
+
+#oval1-1 {
+  // transform: scale(0.7);
+  transform: translate(43%, 5%) scale(0.9);
+  visibility: visible;
+  transition-duration: 5s;
+  width: auto;
+  height: 72%;
+  right: 34%;
+  bottom: 34%;
+  z-index: -4;
+  position: absolute;
+}
+#phone-center-loader-container{
+  position: fixed;
+  left: 50vw;
+  top: 15vh;
+}
+
+//!!!!!!!!!!!!!!
+//mobile syle
+
+#mobile-container {
+  height: vh(100);
+  width: vw(100);
+  overflow-x: hidden;
+  
+}
+#mobile-all-animation-container{
+  bottom: 0%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+
+}
+.mobile-oval1{
+  position: absolute;
+  height: vh(30);
+  width: auto;
+  right: 51%;
+  z-index: -3;
+  bottom: -5%;
+}
+.mobile-oval2{
+  position: absolute;
+  height: vh(20);
+  width: auto;
+  right: -16%;
+  z-index: -4;
+  bottom: 6%;
+}
+.mobile-two-people{
+  position: absolute;
+  height: vh(9);
+  width: auto;
+  right: 1%;
+  z-index: -3;
+  bottom: 0%;
+}
+.mobile-standing-women{
+  position: absolute;
+  height: vh(30);
+  width: auto;
+  left: 1%;
+  z-index: -3;
+  bottom: 0%;
+}
+.mobile-sitting-window-women{
+  position: absolute;
+  height: vh(23);
+  width: auto;
+  left: 1%;
+  z-index: -3;
+  bottom: 0%;
+}
+.mobile-woman{
+  position: absolute;
+    height: vh(13);
+    width: auto;
+    right: -1%;
+    z-index:1 ;
+    bottom: 0%;
+    // display: none;
+  }
+.mobile-plant{
+  position: absolute;
+  height: vh(34);
+  width: auto;
+  right: 0%;
+  z-index: -3;
+  bottom: 0%;
+
+}
+
+//some media queries that we want only in mobile, used for organization page
+#mobile-container {
+  
+  @media screen and (min-aspect-ratio: 4/5)  {
+    .organization-page-content-general  {
+      height: 52vh !important;}
+  }
+  @media screen and (min-aspect-ratio: 9/10)  {
+    .organization-page-content-general  {
+      height: 48vh !important;}
+  }
+  @media screen and (min-aspect-ratio: 10/9)  {
+    .organization-page-content-general  {
+      height: 43vh !important;}
+  }
+
+}

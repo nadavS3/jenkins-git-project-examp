@@ -1,0 +1,15 @@
+@import "./consts.scss";
+.phone-logo {
+    align-self: center;
+    margin-top: 20%;
+    width: 50%;
+}
+.two-logos {
+    display: flex;
+    width: 90%;
+    margin: vh(2.6) auto 0 auto;
+    justify-content: space-between;
+    .mobile-logo {
+        height: vh(6);
+    }
+}

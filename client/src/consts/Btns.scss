@@ -1,0 +1,55 @@
+@import "./consts.scss";
+
+.phone-btn {
+    position: absolute;
+    align-self: center;
+    width: 50%;
+    background: transparent 0% 0% no-repeat padding-box;
+    background-color: $dark-blue;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 4px;
+    opacity: 1;
+    color: white;
+    font-size: vh(3);
+    height: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+.upper-btn {
+    bottom: 15%;
+}
+.form-btn {
+    bottom: 9%;
+}
+.mobile-btn {
+    bottom: vh(5);
+    width: vw(60);
+    height: vh(8);
+    font-size: vh(5);
+    border-radius: 15px;
+    max-height: vh(7);
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.instructions-btn {
+    bottom: 9%;
+}
+
+.not-selected {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.clickable {
+    cursor: pointer;
+}

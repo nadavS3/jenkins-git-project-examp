@@ -1,0 +1,90 @@
+@import "../../../consts/consts.scss";
+$fs: 3s; // fade seconds
+
+.last-unanswered {
+    &:hover {
+        cursor: pointer;
+        background-color: lightblue; // my color
+    }
+}
+.question-number {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 12px 12px 12px;
+    &:hover {
+        cursor: pointer;
+        background-color: lightblue; // my color
+    }
+    .question-number-text {
+        color: $dark-blue;
+    }
+    .answered {
+        justify-self: flex-end;
+        width: vh(1);
+        height: vh(1);
+        border-radius: 50%;
+    }
+    .answered-correct-incorrect {
+        background-color: $light-blue;
+    }
+    .skipped {
+        background-color: $grey;
+    }
+}
+#current-question-number {
+    background-color: #e5f0f4;
+    &:hover {
+        cursor: default;
+    }
+}
+
+@keyframes show-in {
+    from {
+        max-height: vh(0);
+    }
+    to {
+        max-height: vh(100);
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes show-in {
+    from {
+        height: vh(0);
+    }
+    to {
+        height: vh(100);
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes show-in {
+    from {
+        height: vh(0);
+    }
+    to {
+        height: vh(100);
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes show-in {
+    from {
+        height: vh(0);
+    }
+    to {
+        height: vh(100);
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes show-in {
+    from {
+        height: vh(0);
+    }
+    to {
+        height: vh(100);
+    }
+}

@@ -1,0 +1,12 @@
+db.questions.aggregate([
+{$match: { '_id': ObjectId("606ada841623e2ba3f789e4c") }},
+{$project: {
+                _id: 0,
+                questionInfo: {
+                    $filter: {
+                        input: "$questions",
+                        as: "question",
+                        cond: { $eq: ["$$question.questionType", "MULTIPLE CHOICE"] }
+                    }
+                }
+            }}])

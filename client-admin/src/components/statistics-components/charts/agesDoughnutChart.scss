@@ -1,0 +1,28 @@
+@import "../../../consts/fade-in.scss";
+@import "../../../consts/fade-out.scss";
+
+.doughnut-chart {
+    display: flex;
+    justify-content: center;
+
+    .centered-tooltip {
+        text {
+            .percentage {
+                font-size: 3vh;
+                font-weight: 900;
+            }
+            .range {
+                font-size: 3vh;
+            }
+        }
+    }
+    .visible {
+        @include fade-in-mixin(1.5s);
+        width: 100%;
+        opacity: 1;
+    }
+    .invisible {
+        @include fade-out-mixin(1.5s);
+        opacity: 0;
+    }
+}

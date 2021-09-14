@@ -1,0 +1,44 @@
+@import "../../consts/colors.scss";
+
+#users-filter-container {
+    width: 100%;
+    height: 9vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow-y: visible;
+    padding: 0 1vh;
+
+    .generic-filter-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+        overflow-y: visible;
+        position: relative;
+
+        .single-filter {
+            height: 4vh;
+            margin: 0 1vh;
+        }
+    }
+    .small-filter {
+        flex: 4;
+        max-width: 20vw;
+    }
+    .with-title {
+        margin: 0 .5vh;
+        display: flex;
+        
+        .filter-text {
+            height: fit-content;
+            color: $blue;
+            font-weight: bold;
+            font-size: 2vh;
+            flex: 1;
+            white-space: nowrap;
+            margin-bottom: 1vh;
+        }
+    }
+}

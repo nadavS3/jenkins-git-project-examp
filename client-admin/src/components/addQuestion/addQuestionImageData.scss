@@ -1,0 +1,24 @@
+#question-image-container {
+    .top-row-question-image {
+        display: flex;
+    }
+    #top-row-image-displayed {
+        justify-content: space-between;
+        margin-bottom: 2%;
+        #icons {
+            width: 40%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            #delete-image {
+                cursor: pointer;
+            }
+            #edit-image {
+                cursor: pointer;
+            }
+        }
+    }
+    #top-row-image-not-displayed {
+        justify-content: space-around;
+    }
+}

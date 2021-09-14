@@ -1,0 +1,17 @@
+Dockerfile
+.dockerignore
+.git
+.gitignore
+./Docker*
+.vscode
+.package-lock.json
+# client:
+
+Dockerfile
+.dockerignore
+.git
+.gitignore
+./node_modules
+./dist
+./*.log
+/logs

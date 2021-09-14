@@ -1,0 +1,40 @@
+@import "../consts/colors.scss";
+#users-page-container {
+    #go-up-btn {
+        position: fixed;
+        width: 8vh;
+        right: 3vh;
+        bottom: 10vh;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    #title-and-excel {
+        display: flex;
+        #users-title {
+            flex: 1;
+        }
+        $excel-color: #1d6f42;
+        #export-excel {
+            align-self: center;
+            border: 2px solid $excel-color;
+            border-radius: 5px;
+            align-items: center;
+            padding: 5px;
+            display: flex;
+            &:hover {
+                cursor: pointer;
+            }
+            #excel-text {
+                text-align: center;
+                font-size: 2.5vh;
+                padding-bottom: 5px;
+                color: $excel-color;
+            }
+            #excel-icon {
+                width: 5vh;
+                margin-right: 10px;
+            }
+        }
+    }
+}

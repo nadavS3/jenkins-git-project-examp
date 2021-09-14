@@ -1,0 +1,13 @@
+@import '../consts/consts.scss';
+
+.checkmark {
+    display: flex;
+    align-items: center;
+
+    #v-sign {
+        width: vh(4);
+        height: vh(2);
+        margin: auto;
+        transform: translate(-50%, 0);
+    }
+}

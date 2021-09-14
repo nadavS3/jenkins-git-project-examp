@@ -1,0 +1,89 @@
+@import "../consts/colors.scss";
+
+#table-container {
+    .table {
+        width: 100%;
+        color: $blue;
+        border-radius: 5px 5px 0 0;
+        border-spacing: 0; // so thead{tr{}} will start from top of table
+
+        thead {
+            display: table-header-group;
+            vertical-align: middle;
+            border-color: inherit;
+        }
+
+        thead tr {
+            background-color: $blue;
+            color: white;
+            // font-weight: normal !important;
+        }
+
+        thead th {
+            padding: 1vh 0;
+            font-size: 1.8vh;
+            text-align: right;
+            // width: 100px;
+        }
+        #th {
+            font-weight: normal; // override default th bold font-wight
+        }
+
+        .tr {
+            height: 7vh;
+            border-collapse: collapse;
+        }
+
+        .tableBodyStyle {
+            td {
+                padding: 2vh 0;
+                font-size: 1.75vh;
+                text-align: -webkit-center;
+                // min-width: 3vw;
+                max-width: 12vw;
+                background-color: white;
+                text-align: right;
+                // width: 100px;
+            }
+            td:last-child {
+                // padding-left: 5vw;
+            }
+        }
+        .tableBodyStyle:not(:last-child) td { // line between each row
+            border-bottom: 2px solid #f1f2f3;
+        }
+
+        .tableBodyStyle td:first-child,
+        .tableHead th:first-child {
+            padding-right: 5vw;
+        }
+
+        .noRes {
+            font-size: 2.5vh;
+            padding: 3vh;
+            text-align: center;
+            background-color: white;
+        }
+    }
+    .tableNavigation {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #747474;
+        font-size: 2.3vh;
+
+        .navArrow {
+            margin: 0 2vh;
+            font-size: 2vh;
+            cursor: pointer;
+        }
+
+        .disabledNavArrow {
+            color: #74747436;
+            cursor: unset;
+        }
+    }
+}

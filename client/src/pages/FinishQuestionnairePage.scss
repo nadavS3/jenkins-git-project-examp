@@ -1,0 +1,61 @@
+@import "../consts/consts.scss";
+
+.finish-questionnaire-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: "assistant", sans-serif;
+  #finish-questionnaire-mobile-id{
+    // position: absolute;
+    // height: vh(28);
+    
+    // // top: 17%;
+    // bottom: 0%;
+    // right: 0%;
+    // z-index: -1;
+  }
+  .finish-questionnaire-mobile{
+    position: absolute;
+    height: vh(21);
+    
+    transition: height 3s , right 2s;
+    bottom: 0%;
+    right: -2%;
+    z-index: -1;
+  }
+  #shrink-background-mobile{
+    height: vh(19);
+    right: 2%;
+  }
+  .finish-questionnaire-browser {
+    position: absolute;
+    height: vh(73);
+    
+    // top: 17%;
+    bottom: -4%;
+    right: -110%;
+    z-index: -1;
+  }
+  .delay {
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+  }
+}
+#finish-questionnaire-phone-container {
+  height: fit-content;
+  width: fit-content;
+  margin: auto;
+  // overflow: auto;
+  #phone-fake-image {
+    height: vh(90);
+    overflow: unset;
+  }
+}
+#finish-questionnaire-mobile-container {
+  height: vh(100);
+  width: vw(100);
+  overflow-x: hidden;
+}

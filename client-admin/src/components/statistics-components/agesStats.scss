@@ -1,0 +1,8 @@
+#doughnut-charts-wrapper {
+    display: flex;
+    justify-content: space-around;
+
+    .doughnut-chart-container {
+        flex: 40%;
+    }
+}

@@ -1,0 +1,56 @@
+@import "../../../consts/consts.scss";
+
+.questions-menu {
+    width: 90%;
+    #menu-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    #close-menu-btn {
+        position: absolute;
+        width: vh(5);
+        height: vh(5);
+        background-color: $dark-blue;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #close-menu-img {
+            width: 50%;
+        }
+    }
+}
+#browser-menu {
+    margin-right: vw(1);
+    margin-top: vh(15);
+    #menu-container {
+        height: vh(65);
+    }
+    #close-menu-btn {
+        top: 15%;
+        left: 10%;
+        &:hover {
+            cursor: pointer;
+        }
+        #close-menu-img {
+            width: 50%;
+        }
+    }
+}
+#mobile-menu {
+    margin: vh(12) auto;
+    #menu-container {
+    }
+    #close-menu-btn {
+        top: 5%;
+        left: 5%;
+        #close-menu-img {
+            width: 50%;
+        }
+    }
+}

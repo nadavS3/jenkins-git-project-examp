@@ -1,0 +1,22 @@
+.image-loader {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #a6a4a487;
+    -webkit-animation: flash 2s ease-in-out 1.5s infinite normal both;
+    animation: flash 2s ease-in-out 1.5s infinite normal both;
+    // animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 0;
+    }
+}

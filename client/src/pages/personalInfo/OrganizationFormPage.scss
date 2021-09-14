@@ -1,0 +1,28 @@
+// @import "../../consts/consts.scss";
+@import "../../consts/consts.scss";
+#org {
+    position: fixed;
+    left: vw(50);
+    top: vh(31);
+    height: vh(62);
+    z-index: -1;
+}
+
+#organization-oval1{
+    position: absolute;
+    height: vh(56);
+    top: 1%;
+    left: 45%;
+    z-index: -2;
+}
+
+#organization-oval2{
+    position: absolute;
+    height: vh(40);
+    left: 105%;
+    z-index: -3;
+    bottom: 19%;
+}
+.mobile-woman{
+    // display: block;
+    }

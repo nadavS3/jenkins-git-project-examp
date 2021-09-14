@@ -1,0 +1,20 @@
+@import "./consts.scss";
+
+.phone-header {
+    width: 74%;
+    align-self: center;
+    font-family: "Heebo", sans-serif;
+    font-size: vh(4);
+    text-align: center;
+    color: $dark-blue;
+    border-bottom: 3px solid $light-blue;
+    padding-bottom: 4%;
+}
+#mobile-header {
+    width: 85%;
+    padding-bottom: vh(0.8);
+    border-bottom: 4px solid $light-blue;
+    margin-top: vh(2.7);
+    margin-bottom: vh(4);
+    font-size: vh(4.1);
+}
